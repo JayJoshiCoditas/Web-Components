@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "owc-dev-server -o"
+  },
+  "devDependencies": {
+    "lit-element": "^2.2.0",
+    "owc-dev-server": "^1.0.0"
+  }
+}
