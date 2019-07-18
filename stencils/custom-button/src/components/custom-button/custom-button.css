@@ -1,0 +1,17 @@
+.buttonLabel {
+    padding-right: 10px;
+}
+
+.hybridButton {
+    height: 50px;
+    width: 75px;
+    font-size: 15px;
+    border-radius: 8px;
+    color: slateblue;
+    background-color: white;
+}
+
+.buttonIcon {
+    color: slateblue;
+
+}
