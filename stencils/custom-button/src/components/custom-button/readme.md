@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `buttonText` | `button-text` |             | `string` | `undefined` |
-| `name`       | `name`        |             | `string` | `undefined` |
+| Property     | Attribute     | Description | Type     | Default               |
+| ------------ | ------------- | ----------- | -------- | --------------------- |
+| `buttonText` | `button-text` |             | `string` | `undefined`           |
+| `iconName`   | `icon-name`   |             | `string` | `'fas fa-caret-left'` |
 
 
 ----------------------------------------------

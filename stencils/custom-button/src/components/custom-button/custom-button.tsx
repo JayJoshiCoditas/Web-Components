@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'custom-button',
-  styleUrls: ['font-awesome-all.css','custom-button.css'],
+  styleUrls: ['custom-button.css'],
   shadow: true
 })
 export class CustomButton {
