@@ -8,12 +8,12 @@
     height: 50px;
     width: 75px;
     font-size: 15px;
+    font-family: var(--global-font-family,'serif');
     border-radius: 8px;
-    color: slateblue;
+    color: var(--global-primary-color, slateblue);
     background-color: white;
 }
 
 .buttonIcon {
-    color: slateblue;
-
+    color: var(--global-primary-color, slateblue);
 }
