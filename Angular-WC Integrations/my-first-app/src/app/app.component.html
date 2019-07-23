@@ -1,5 +1,5 @@
 <style>
-    my-input-field {
+    :root {
       --global-font-family: {{val1}};
       --global-font-size: {{val2}};
     }
@@ -27,8 +27,12 @@
     <option value="40">40 px</option>
     <option value="50">50 px</option>
   </select>
-
 <hr/>
-<my-input-field label-Text="Enter Your Text : " place-Holder="Enter Text..."></my-input-field>
+
+<!-- Input Field Custom Web-Component -->
+<my-input-field input-type="text" label-Text="Name : " place-Holder="Enter Text..."></my-input-field>
+<br>
+<my-input-field  input-Type="Password" label-Text="Password : " place-Holder="Enter Password..."></my-input-field>
+<!-- Custom Button Custom Web-Component -->
 <custom-button icon-name="fas fa-caret-right" button-text="Login"></custom-button>
 <br />

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { UpdateCssService } from './update-css.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,18 +12,21 @@ export class AppComponent {
   fontSizeElement = null;
   val1 = '';
   val2 = '';
+  updateCss = new UpdateCssService();
+
+  constructor() {
+  }
 
   fontChanged() {
     this.fontStyleElement = document.getElementById('font-style');
     this.val1 = this.fontStyleElement.options[this.fontStyleElement.selectedIndex].value;
-    const abc = document.getElementsByTagName('my-input-field')[0];
-    abc.style.setProperty('--global-font-family', `${this.val1}`);
+    //  css update service
+    this.updateCss.changeCss('--global-font-family', `${this.val1}`);
   }
   sizeChanged() {
-    console.log('Size changed');
     this.fontSizeElement = document.getElementById('font-size');
     this.val2 = this.fontSizeElement.options[this.fontSizeElement.selectedIndex].value;
-    const abc = document.getElementsByTagName('my-input-field')[0];
-    abc.style.setProperty('--global-font-size', `${this.val2}` + `px`);
+    //  css update service
+    this.updateCss.changeCss('--global-font-size', `${this.val2}` + `px`);
   }
 }
