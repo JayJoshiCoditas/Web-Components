@@ -1,14 +1,16 @@
 <style>
     :root {
-      --global-font-family: {{val1}};
-      --global-font-size: {{val2}};
+      --global-font-family: {{fontStyleValue}};
+      --global-font-size: {{fontSizeValue}};
+      --global-primary-color: {{fontColorValue}}
     }
   </style>
   
 <h3>Angular + Stencil</h3>
 
 <label>Select Font Style:</label>
-<select id="font-style" ng-model = "globalFontFamily" (change) = "fontChanged()">
+&nbsp;
+<select id="font-style"  (change) = "fontChanged($event)">
     <option value="sans-serif">Select Style</option>
     <option value="Comic Sans MS">Comic Sans MS</option>
     <option value="Helvetica">Helvetica</option>
@@ -18,17 +20,26 @@
     <option value="Cursive">cursive</option>
   </select>
 
-<label>Select Font Size:</label>
-<select id="font-size" ng-model = "globalFontSize" (change) = "sizeChanged()">
-    <option value="5">Select Size</option>
-    <option value="10">10 px</option>
-    <option value="20">20 px</option>
-    <option value="30">30 px</option>
-    <option value="40">40 px</option>
-    <option value="50">50 px</option>
-  </select>
-<hr/>
+&nbsp;&nbsp;&nbsp;&nbsp;
 
+<label>Select Font Size:</label>
+&nbsp;
+<select id="font-size" (change) = "sizeChanged($event)">
+  <option value="5">Select Size</option>
+  <option value="10">10 px</option>
+  <option value="20">20 px</option>
+  <option value="30">30 px</option>
+  <option value="40">40 px</option>
+  <option value="50">50 px</option>
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<label>Select Font Color:</label>
+&nbsp;&nbsp;
+<input type="color" (change) = "colorChanged($event)">   
+  
+<hr/>
 <!-- Input Field Custom Web-Component -->
 <my-input-field input-type="text" label-Text="Name : " place-Holder="Enter Text..."></my-input-field>
 <br>

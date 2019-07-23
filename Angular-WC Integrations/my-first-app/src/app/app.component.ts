@@ -6,27 +6,34 @@ import { UpdateCssService } from './update-css.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  globalFontFamily = '';
-  globalFontSize = '';
   fontStyleElement = null;
   fontSizeElement = null;
-  val1 = '';
-  val2 = '';
+  fontColorElement = null;
+  fontStyleValue = '';
+  fontSizeValue = '';
+  fontColorValue = '';
   updateCss = new UpdateCssService();
 
   constructor() {
   }
 
-  fontChanged() {
+  fontChanged(event: any) {
     this.fontStyleElement = document.getElementById('font-style');
-    this.val1 = this.fontStyleElement.options[this.fontStyleElement.selectedIndex].value;
+    this.fontStyleValue = event.target.value;
     //  css update service
-    this.updateCss.changeCss('--global-font-family', `${this.val1}`);
+    this.updateCss.changeCss('--global-font-family', `${this.fontStyleValue}`);
   }
-  sizeChanged() {
+  sizeChanged(event: any) {
     this.fontSizeElement = document.getElementById('font-size');
-    this.val2 = this.fontSizeElement.options[this.fontSizeElement.selectedIndex].value;
+    this.fontSizeValue = event.target.value;
     //  css update service
-    this.updateCss.changeCss('--global-font-size', `${this.val2}` + `px`);
+    this.updateCss.changeCss('--global-font-size', `${this.fontSizeValue}` + `px`);
+  }
+
+  colorChanged(event: any) {
+    this.fontColorElement = document.getElementById('font-color');
+    this.fontColorValue = event.target.value;
+    //  css update service
+    this.updateCss.changeCss('--global-primary-color', `${this.fontColorValue}`);
   }
 }
